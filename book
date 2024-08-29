@@ -7,7 +7,7 @@ Sample Code:
 
 Here’s a simple example using the OpenAI GPT-3 API to generate text.
 
-python
+```python
 Copy code
 import openai
 
@@ -22,6 +22,7 @@ response = openai.Completion.create(
 )
 
 print(response.choices[0].text.strip())
+```
 1.2 Key Applications and Impact
 Example: DeepArt uses generative models to turn photos into artistic images in the style of famous painters.
 
@@ -29,7 +30,7 @@ Sample Code:
 
 This code snippet demonstrates how you might use a style transfer model to apply an artistic style to an image.
 
-python
+```python
 Copy code
 import torch
 from torchvision import transforms, models
@@ -56,6 +57,7 @@ output = style_model(image)
 output_image = transforms.ToPILImage()(output.squeeze(0))
 
 output_image.save('styled_image.jpg')
+```
 1.3 Case Studies
 Example: DALL-E generates images from textual descriptions. For instance, given the prompt "an armchair in the shape of an avocado," DALL-E can create a visual representation of such an armchair.
 
@@ -63,7 +65,7 @@ Sample Code:
 
 Assuming you have access to the DALL-E API:
 
-python
+```python
 Copy code
 import openai
 
@@ -79,6 +81,7 @@ response = openai.Image.create(
 
 # Save the image
 image_url = response['data'][0]['url']
+```
 Chapter 2: Fundamentals of Generative Models
 2.1 Definition and Types
 Example: Generative models include GANs, VAEs, and flow-based models. For instance, VAEs can be used for generating new images by learning a latent representation of data.
